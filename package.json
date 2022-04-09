@@ -1,15 +1,18 @@
 {
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.3"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "name": "budgtr",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
