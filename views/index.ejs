@@ -5,15 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>budgtr index page</title>
-    <link rel="stylesheet" href="/normalize.css" />
-    <link rel="stylesheet" href="/skeleton.css" />
-</head>
+    <link href="/public/normalize.css" rel="stylesheet" type="text/css">
+    <link href="/public/skeleton.css" rel="stylesheet" type="text/css">
+    </head>
+
 <body>
-    <h1>Budgtr</h1>
-    <div class="container">
-        <table>
-        </table>
-    </div>
+   
     
+    <div class="container">
+        <h1>Budgtr</h1>
+        <button><a href="/budgets/new">Create a new budget item</a></button>
+    <table>
+     
+        <% for (let budget in allBudgets) { %>
+         <tr>
+           <td><%= allBudgets[budget].date %></td>
+           <td><a href="/budgets/<%=budget%>"><%= allBudgets[budget].name %></td></a>
+           <td><%= allBudgets[budget].amount %></td>
+         </tr>    
+        <% } %>
+     </table>
+    </div>
 </body>
 </html>
